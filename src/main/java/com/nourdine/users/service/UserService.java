@@ -4,6 +4,7 @@ import java.util.List;
 
 import com.nourdine.users.entities.Role;
 import com.nourdine.users.entities.User;
+import com.nourdine.users.service.register.RegistrationRequest;
 
 public interface UserService {
 	User saveUser(User user);
@@ -14,5 +15,7 @@ public interface UserService {
 
 	User addRoleToUser(String username, String rolename);
 	List<User> findAllUsers();
+	User registerUser(RegistrationRequest request);
+	public User validateToken(String code);
 
 }
